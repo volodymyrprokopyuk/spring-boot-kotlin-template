@@ -11,7 +11,7 @@ import org.vld.template.configuration.ApplicationConfiguration
 open class Application : CommandLineRunner {
 
     companion object {
-        val logger: Logger = LoggerFactory.getLogger(ApplicationConfiguration::class.java)
+        val logger: Logger = LoggerFactory.getLogger(Application::class.java)
     }
 
     override fun run(vararg args: String?) {
