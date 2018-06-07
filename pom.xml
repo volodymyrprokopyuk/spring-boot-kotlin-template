@@ -26,6 +26,8 @@
 		<java.version>1.8</java.version>
 		<kotlin.version>1.2.41</kotlin.version>
 		<start-class>org.vld.template.ApplicationKt</start-class>
+        <skipUnitTests>false</skipUnitTests>
+        <skipIntegrationTests>false</skipIntegrationTests>
 	</properties>
 
 	<dependencies>
@@ -81,6 +83,22 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+            <!-- Unit tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>${skipUnitTests}</skip>
+                </configuration>
+            </plugin>
+            <!-- Integration tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <configuration>
+                    <skip>${skipIntegrationTests}</skip>
+                </configuration>
+            </plugin>
 
 		</plugins>
 
