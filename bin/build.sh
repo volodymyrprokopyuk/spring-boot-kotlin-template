@@ -2,6 +2,6 @@
 
 set -eu
 
-gradle build "$@"
+#gradle build "$@"
 
-#mvn clean install "$@"
+mvn clean install "$@"

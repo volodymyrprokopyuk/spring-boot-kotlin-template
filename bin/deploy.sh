@@ -2,8 +2,8 @@
 
 set -eu
 
-TARGET=build/libs
-#TARGET=target
+#TARGET=build/libs
+TARGET=target
 
 cp -r config "${TARGET}"
 
