@@ -1,3 +1,2 @@
-logging:
-    level:
-        org.vld.template: DEBUG
+---
+logging.config: config/logback.xml
