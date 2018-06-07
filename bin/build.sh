@@ -3,3 +3,5 @@
 set -eu
 
 gradle build "$@"
+
+#mvn clean install "$@"

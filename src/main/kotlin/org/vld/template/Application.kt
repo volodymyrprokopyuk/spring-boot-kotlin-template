@@ -3,9 +3,8 @@ package org.vld.template
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.boot.CommandLineRunner
-import org.springframework.boot.SpringApplication
+import org.springframework.boot.runApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.vld.template.configuration.ApplicationConfiguration
 
 @SpringBootApplication
 open class Application : CommandLineRunner {
@@ -19,4 +18,4 @@ open class Application : CommandLineRunner {
     }
 }
 
-fun main(args: Array<String>) = SpringApplication.run(Application::class.java, *args)
+fun main(args: Array<String>) = runApplication<Application>(*args)

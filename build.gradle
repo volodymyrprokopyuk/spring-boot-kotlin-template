@@ -16,6 +16,12 @@ buildscript {
 
 apply plugin: "kotlin"
 
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
 apply plugin: "org.springframework.boot"
 
 version = "0.1.0"
