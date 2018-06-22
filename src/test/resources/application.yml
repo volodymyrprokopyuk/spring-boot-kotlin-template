@@ -1,0 +1,27 @@
+#spring:
+#    datasource:
+#        username: postgres
+#        password: postgres
+##        url: jdbc:postgresql://localhost:5432/postgres
+##        driverClassName: org.postgresql.Driver
+#        url: jdbc:tc:postgresql:10://localhost:5432/postgres
+#        driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
+
+spring:
+    datasource:
+        username: family
+        password: Password!1
+#        url: jdbc:sqlserver://localhost:1433;databaseName=master
+#        driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        url: jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=people
+        driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
+
+liquibase:
+    datasource:
+        username: family
+        password: Password!1
+        url: jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=people?TC_INITSCRIPT=init/sqlserver_init.sql
+        driver: org.testcontainers.jdbc.ContainerDatabaseDriver
+    changeLog: classpath:liquibase/changelog-master.xml
+#    defaultSchema: liquibase
+    defaultSchema: dbo
