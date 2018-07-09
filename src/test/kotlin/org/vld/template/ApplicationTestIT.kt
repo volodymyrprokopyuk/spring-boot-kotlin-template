@@ -23,7 +23,7 @@ class ApplicationTestIT {
     /*@Before
     fun setupDataSourceForEachTest() {
         dataSource = DataSourceBuilder.create()
-                .url("jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=people?TC_INITSCRIPT=init/sqlserver_init.sql")
+                .url("jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=master?TC_INITSCRIPT=init/sqlserver_init.sql")
                 .username("sa")
                 .password("Password1!")
                 .driverClassName("org.testcontainers.jdbc.ContainerDatabaseDriver")
@@ -40,7 +40,7 @@ class ApplicationTestIT {
         @JvmStatic
         fun setupDataSourceForAllTests() {
             dataSource = DataSourceBuilder.create()
-                    .url("jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=people?TC_INITSCRIPT=init/sqlserver_init.sql")
+                    .url("jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=master?TC_INITSCRIPT=init/sqlserver_init.sql")
                     .username("sa")
                     .password("Password1!")
                     .driverClassName("org.testcontainers.jdbc.ContainerDatabaseDriver")
