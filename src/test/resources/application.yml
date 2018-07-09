@@ -1,15 +1,15 @@
 #spring:
 #    datasource:
-#        username: family
+#        username: sax
 #        password: Password1!
-#        url: jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=master?TC_INITSCRIPT=init/sqlserver_init.sql
+#        url: jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=masterx?TC_INITSCRIPT=init/sqlserver_init.sql
 #        driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
 
 liquibase:
     datasource:
-        username: sa
+        username: sax
         password: Password1!
-        url: jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=master?TC_INITSCRIPT=init/sqlserver_init.sql
+        url: jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=masterx?TC_INITSCRIPT=init/sqlserver_init.sql
         driver: org.testcontainers.jdbc.ContainerDatabaseDriver
     changeLog: classpath:liquibase/changelog-master.xml
     defaultSchema: dbo

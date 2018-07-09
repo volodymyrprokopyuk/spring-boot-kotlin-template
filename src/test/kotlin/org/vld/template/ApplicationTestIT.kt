@@ -23,8 +23,8 @@ class ApplicationTestIT {
     /*@Before
     fun setupDataSourceForEachTest() {
         dataSource = DataSourceBuilder.create()
-                .url("jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=master?TC_INITSCRIPT=init/sqlserver_init.sql")
-                .username("sa")
+                .url("jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=masterx?TC_INITSCRIPT=init/sqlserver_init.sql")
+                .username("sax")
                 .password("Password1!")
                 .driverClassName("org.testcontainers.jdbc.ContainerDatabaseDriver")
                 .build()
@@ -34,14 +34,14 @@ class ApplicationTestIT {
 
         val logger: Logger = LoggerFactory.getLogger("ApplicationTestIT")
 
-//        private lateinit var dataSource: DataSource
+        private lateinit var dataSource: DataSource
 
         /*@BeforeClass
         @JvmStatic
         fun setupDataSourceForAllTests() {
             dataSource = DataSourceBuilder.create()
-                    .url("jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=master?TC_INITSCRIPT=init/sqlserver_init.sql")
-                    .username("sa")
+                    .url("jdbc:tc:mssqlserver:2017-GA://localhost:1433;databaseName=masterx?TC_INITSCRIPT=init/sqlserver_init.sql")
+                    .username("sax")
                     .password("Password1!")
                     .driverClassName("org.testcontainers.jdbc.ContainerDatabaseDriver")
                     .build()
