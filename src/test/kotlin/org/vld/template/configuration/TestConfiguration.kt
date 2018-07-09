@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Configuration
 import javax.sql.DataSource
 
 @Configuration
-open class TestConfiguration {
+class TestConfiguration {
 
     @Bean
-    open fun liquibaseDataSource(
+    fun liquibaseDataSource(
             @Value("\${liquibase.datasource.url}") url: String = "OVERRIDEN_BY_EXPRESSION",
             @Value("\${liquibase.datasource.username}") username: String = "OVERRIDEN_BY_EXPRESSION",
             @Value("\${liquibase.datasource.password}") password: String = "OVERRIDEN_BY_EXPRESSION",
@@ -24,7 +24,7 @@ open class TestConfiguration {
             .build()
 
     @Bean
-    open fun liquibase(
+    fun liquibase(
             @Value("\${liquibase.changeLog}") changeLog: String,
             @Value("\${liquibase.defaultSchema}") defaultSchema: String
     ): SpringLiquibase {
