@@ -8,8 +8,7 @@
 
     <changeSet id="ddl-1.0.0-001" author="Vlad">
         <comment>Create table family.person</comment>
-        <!--<createTable schemaName="family" tableName="person">-->
-        <createTable schemaName="dbo" tableName="person">
+        <createTable schemaName="family" tableName="person">
             <column name="id" type="INT" autoIncrement="true">
                 <constraints primaryKey="true"/>
             </column>

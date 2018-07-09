@@ -66,7 +66,7 @@ class ApplicationTestIT {
     @Test
     fun givenDatabase_whenQueryDatabase_thenReturnResult() {
         // Given & When
-        val result = JdbcTemplate(dataSource).queryForObject("SELECT p.first_name FROM dbo.person p", String::class.java)
+        val result = JdbcTemplate(dataSource).queryForObject("SELECT p.first_name FROM family.person p", String::class.java)
         // Then
         assert(result == "Volodymyr")
     }
